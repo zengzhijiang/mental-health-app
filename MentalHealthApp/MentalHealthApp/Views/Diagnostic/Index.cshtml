@@ -1,0 +1,223 @@
+﻿@model MentalHealthApp.ViewModels.UserViewModel
+
+<style>
+    body {
+        padding-bottom: 0%;
+        background: #f2f4f4;
+    }
+    Img {
+        width: 19vh;   
+    }
+    #happy{
+        margin-right: 20vw;
+    }
+    #proud {
+        margin-right: 20vw;
+    }
+    #angry {
+        margin-right: 20vw;
+    }
+    #happytext {
+        margin-right: 20vw;
+    }
+    #pics {
+        display: table;
+        margin: auto;
+        margin-top: 5vh;
+    }
+    img {
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        border: 1px solid #ccc !important;
+        border-radius: 10px;
+        background: #ffffff;
+        background-color: lightskyblue;
+    }
+    label {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        border: 1px solid #ccc !important;
+        border-radius: 5px;
+        background: #ffffff;
+        margin-right: 1.5em;
+        margin-left: 1.5em;
+    }
+
+</style>
+
+
+<body>
+    
+
+    <div id="content">
+        <div id="contain" class="h-100 align-items-center diagnostic">
+            <div>
+                <div id="pics">
+
+                    <h3><strong>How are you feeling today?</strong></h3>
+
+                    <img id="happy" title="Happy is when I feel good all over and think good thoughts." onclick="happyClick()" src="~/images/emojis/@{WriteLiteral(Model.Avatar);}happy.png" />
+                    <img id="sad" title="When you are sad you are not feeling happy." onclick="sadClick()" src="~/images/emojis/@{WriteLiteral(Model.Avatar);}sad.png" />
+                    <br /> &emsp;
+                    <label style="font-family:courier; background-color:lightskyblue"><strong> &ensp; Happy &ensp;</strong></label>
+                    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                    <label style="font-family:courier; background-color:lightskyblue"><strong> &ensp; Sad &ensp;</strong></label>
+                    <br />
+                    <img id="proud" title="Proud is when I feel like I did something well." onclick="proudClick()" src="~/images/emojis/@{WriteLiteral(Model.Avatar);}proud.png" />
+                    <img id="relaxed" title="Relaxed is when I feel calm and at ease." onclick="relaxedClick()" src="~/images/emojis/@{WriteLiteral(Model.Avatar);}relaxed.png" />
+                    <br /> &emsp;
+                    <label style="font-family:courier; background-color:lightskyblue"><strong>&ensp; Proud &ensp;</strong></label>
+                    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                    <label style="font-family:courier; background-color:lightskyblue"><strong>&ensp; Relaxed &ensp;</strong></label>
+                    <br />
+                    <img id="angry" title="Angry is when I am mad and upset." onclick="angryClick()" src="~/images/emojis/@{WriteLiteral(Model.Avatar);}angry.png" />
+                    <img id="worried" title="Worried is when I am scared and think a lot about my fear." onclick="worriedClick()" src="~/images/emojis/@{WriteLiteral(Model.Avatar);}worried.png" />
+                    <br /> &emsp;
+                    <label style="font-family:courier; background-color:lightskyblue"><strong>&ensp; Angry &ensp;</strong></label>
+                    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                    <label style="font-family:courier; background-color:lightskyblue"><strong>&ensp; Worried &ensp;</strong></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+            @*<div id="body3">
+
+                    <div class="row" style="padding-bottom: 3%;">
+                        <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                        <div class="col-md-3 col-sm-3 col-xs-3"><img id="happy" onclick="happyClick()" src="~/images/emojis/@{WriteLiteral(Model.Avatar);}happy.png" /></div>
+                        <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                        <div class="col-md-3 col-sm-3 col-xs-3"><img id="sad" onclick="sadClick()" src="~/images/emojis/@{WriteLiteral(Model.Avatar);}sad.png"  /></div>
+                        <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                    </div>
+
+                    <div class="row" style="padding-bottom: 3%;">
+                        <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                        <div class="col-md-3 col-sm-3 col-xs-3"><img id="proud" onclick="proudClick()" src="~/images/emojis/@{WriteLiteral(Model.Avatar);}proud.png"  /></div>
+                        <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                        <div class="col-md-3 col-sm-3 col-xs-3"><img id="relaxed" onclick="relaxedClick()" src="~/images/emojis/@{WriteLiteral(Model.Avatar);}relaxed.png"  /></div>
+                        <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                    </div>
+
+                    <div class="row" style="padding-bottom: 3%;">
+                        <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                        <div class="col-md-3 col-sm-3 col-xs-3"><img id="angry" onclick="angryClick()" src="~/images/emojis/@{WriteLiteral(Model.Avatar);}angry.png"  /></div>
+                        <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                        <div class="col-md-3 col-sm-3 col-xs-3"><img id="worried" onclick="worriedClick()" src="~/images/emojis/@{WriteLiteral(Model.Avatar);}worried.png" /></div>
+                        <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                    </div>
+
+                </div>*@
+
+            <script>
+    function happyClick() {
+        document.body.style.background = "#ADFF2F";
+        $(document).ready(function () {
+            $("#angry").delay(600).animate({ opacity: 0 });
+            $("#proud").delay(600).animate({ opacity: 0 });
+            $("#relaxed").delay(600).animate({ opacity: 0 });
+            $("#sad").delay(600).animate({ opacity: 0 });
+            $("#worried").delay(600).animate({ opacity: 0 }, 500, function () {
+                //thing to do when you animation is finished e.g.
+                window.location.href = '@Html.Raw(@Url.Action("FirstQuestion", "Diagnostic", new { @emotion = "happy", @color = "#ADFF2F" }))';
+            });
+            e.preventDefault();
+
+            setTimeout(1000);
+
+        });
+    }
+    function angryClick() {
+        document.body.style.background = "#B22222";
+
+        $(document).ready(function () {
+            $("#happy").delay(600).animate({ opacity: 0 });
+            $("#proud").delay(600).animate({ opacity: 0 });
+            $("#relaxed").delay(600).animate({ opacity: 0 });
+            $("#sad").delay(600).animate({ opacity: 0 });
+            $("#worried").delay(600).animate({ opacity: 0 }, 500, function () {
+                //thing to do when you animation is finished e.g.
+                window.location.href = '@Html.Raw(@Url.Action("FirstQuestion", "Diagnostic", new { @emotion = "angry", @color = "#B22222" }))';
+            });
+            e.preventDefault();
+        });
+    }
+
+    function proudClick() {
+        document.body.style.background = "Gold";
+        $(document).ready(function () {
+            $("#angry").delay(600).animate({ opacity: 0 });
+            $("#happy").delay(600).animate({ opacity: 0 });
+            $("#relaxed").delay(600).animate({ opacity: 0 });
+            $("#sad").delay(600).animate({ opacity: 0 });
+            $("#worried").delay(600).animate({ opacity: 0 }, 500, function () {
+                //thing to do when you animation is finished e.g.
+                window.location.href = '@Html.Raw(@Url.Action("FirstQuestion", "Diagnostic", new { @emotion = "proud", @color = "Gold" }))';
+            });
+            e.preventDefault();
+        });
+
+    }
+
+    function relaxedClick() {
+        document.body.style.background = "LightCyan";
+        $(document).ready(function () {
+            $("#angry").delay(600).animate({ opacity: 0 });
+            $("#happy").delay(600).animate({ opacity: 0 });
+            $("#proud").delay(600).animate({ opacity: 0 });
+            $("#sad").delay(600).animate({ opacity: 0 });
+            $("#worried").delay(600).animate({ opacity: 0 }, 500, function () {
+                //thing to do when you animation is finished e.g.
+                window.location.href = '@Html.Raw(@Url.Action("FirstQuestion", "Diagnostic", new { @emotion = "relaxed", @color = "LightCyan" }))';
+            });
+            e.preventDefault();
+        });
+
+
+    }
+
+    function sadClick() {
+        document.body.style.background = "#6495ED";
+        $(document).ready(function () {
+            $("#angry").delay(600).animate({ opacity: 0 });
+            $("#proud").delay(600).animate({ opacity: 0 });
+            $("#happy").delay(600).animate({ opacity: 0 });
+            $("#relaxed").delay(600).animate({ opacity: 0 });
+            $("#worried").delay(600).animate({ opacity: 0 }, 500, function () {
+                //thing to do when you animation is finished e.g.
+                window.location.href = '@Html.Raw(@Url.Action("FirstQuestion", "Diagnostic", new { @emotion = "sad", @color = "#6495ED" }))';
+            });
+            e.preventDefault();
+        });
+
+
+    }
+
+    function worriedClick() {
+        document.body.style.background = "DarkOrange";
+        $(document).ready(function () {
+            $("#angry").delay(600).animate({ opacity: 0 });
+            $("#proud").delay(600).animate({ opacity: 0 });
+            $("#relaxed").delay(600).animate({ opacity: 0 });
+            $("#sad").delay(600).animate({ opacity: 0 });
+            $("#happy").delay(600).animate({ opacity: 0 }, 500, function () {
+                //thing to do when you animation is finished e.g.
+                window.location.href = '@Html.Raw(@Url.Action("FirstQuestion", "Diagnostic", new { @emotion = "worried", @color = "DarkOrange" }))';
+            });
+            e.preventDefault();
+        });
+
+
+
+    }
+            </script>

@@ -1,0 +1,73 @@
+﻿@model MentalHealthApp.ViewModels.UserViewModel
+
+
+<style>
+    #wrap {
+        text-align: center;
+    }
+    .h2 {
+        color: #ffffff;
+    }
+    #count {
+        color: #ffffff;
+        display: flex;
+        justify-content: space-evenly;  
+    }
+
+    #raisedHand {
+        margin-top: 10px;
+    }
+
+    #message {
+        display: inline-block;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 25px;
+        background: #ffffff;
+        border: 2px solid #ffffff;
+        padding: 20px;
+    }
+    #done {
+        display: flex;
+        justify-content: space-evenly;
+        visibility: hidden;
+        margin-top: 10px;
+    }
+
+
+</style>
+
+@{
+    ViewData["Title"] = "RelaxedGame";
+}
+<div style="margin:auto;">
+    <h1 id="count">0</h1>
+</div>
+<div style="display:flex; justify-content: space-evenly">
+    @for (var i = 0; i < ViewBag.numStars; i++)
+    {
+        <img id="star@(i)" onclick="starClick(this); this.onclick=null;" src="~/images/relaxedGame/star.png" height="75" width="75" />
+    }
+</div>
+
+<div id="wrap">
+    <div id="message">
+        <h2>It’s great to be relaxed. @{WriteLiteral(Model.Avatar);} feels relaxed because it is night time at the zoo. 
+        It’s quiet and all the stars are out. Can you count them?</h2>
+    </div> 
+</div>
+
+<button id="done" class='btn btn-success' onclick="location.href='@Url.Action("", "diagnostic")'">Sleep!</button>
+
+<script>
+    document.body.style.background = "#000000";
+    function starClick(object) {
+        document.getElementById('count').innerHTML = parseInt(document.getElementById('count').innerHTML, 10) + 1;
+        $(object).animate({ width: "100px", height: "100px" }, 250);
+        $(object).animate({ width: "75px", height: "75px" }, 250);
+
+        if (document.getElementById('count').innerHTML == @ViewBag.numStars) {
+            document.getElementById('done').style.visibility = 'visible';
+        }
+    }
+</script>

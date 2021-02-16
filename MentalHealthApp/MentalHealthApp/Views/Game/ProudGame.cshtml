@@ -1,0 +1,77 @@
+﻿@model MentalHealthApp.ViewModels.UserViewModel
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+    #wrap { text-align: center; }
+    #raisedHand { margin-top: 10px; }
+    #message {
+        display: inline-block;  margin: auto;
+        margin-top: 10px;       border-radius: 20px;
+        background: #ffffff;    border: 2px solid #ffffff;    
+        padding: 5px;
+    }
+    #done {
+        display: flex;
+        visibility: hidden;
+        margin-top: 10px;
+    }
+
+</style>
+
+@{
+    ViewData["Title"] = "ProudGame";
+}
+
+<div id="wrap">
+    <div id="message">
+        <h2>
+            You should be proud of yourself! Keep it up! <br />
+            @{WriteLiteral(Model.Avatar);} is proud when she cleans up the zoo. Will you help her?
+        </h2>
+    </div>
+    <br />
+    <button id="done" class='btn btn-success' onclick="location.href='@Url.Action("", "diagnostic")'">Good job!</button>
+</div>
+<div style="margin:auto; visibility: hidden;" >
+    <h1 id="count">0</h1>
+</div>
+<div style="display:flex; justify-content: space-evenly">
+    @for (var i = 0; i < ViewBag.numStars; i++)
+    {
+        <img id="star@(i)" onclick="starClick(this); this.onclick=null;" src="~/images/proudGame/trash.png" height="75" width="75" />
+    }
+</div>
+<br /><br />
+<img id="dog" style="margin-left:20px" src="~/images/proudGame/monkey.png" height="220" width="220" />
+
+<script>
+    function startGame() {
+        redGamePiece = new component(75, 75, "red", 10, 10);
+        yellowGamePiece = new component(75, 75, "yellow", 50, 60);
+        blueGamePiece = new component(75, 75, "blue", 10, 220);
+        myGameArea.start();
+    }
+    var myGameArea = {
+        canvas: document.createElement("canvas"),
+        start: function () {
+            this.canvas.width = 480;
+            this.canvas.height = 270;
+            this.context = this.canvas.getContext("2d");
+            document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+            this.frameNo = 0;
+        },
+        clear: function () {
+            this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        }
+    }
+    document.body.style.background = "Gold";
+    function starClick(object) {
+        document.getElementById('count').innerHTML = parseInt(document.getElementById('count').innerHTML, 10) + 1;
+        $(object).fadeOut();
+
+        if (document.getElementById('count').innerHTML == @ViewBag.numStars) {
+            document.getElementById('done').style.visibility = 'visible';
+        }
+    }
+</script>
+

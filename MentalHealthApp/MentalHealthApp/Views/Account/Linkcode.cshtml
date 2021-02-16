@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Linkcode";
+    string code = "";
+    try {
+        code = ViewBag.LinkCode;
+    }
+    catch(Exception e){ }
+
+}
+<div class="col-lg-offset-3 col-lg-6 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-offset-3 col-xs-6" style="margin-top:5%">
+    <h2>Linkcode: @code </h2>
+    <form asp-action="GenerateLinkCode" asp-controller="Account">
+        <input class="btn" type="submit" value="Generate">
+    </form>
+</div>

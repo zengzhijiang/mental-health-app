@@ -1,0 +1,86 @@
+﻿@model IEnumerable<MentalHealthApp.ViewModels.UserResponseViewModel>
+@{
+    var rowColor = "";
+}
+<h2>User Reports</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                Recent Emotion
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Response)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            //controls the row color
+
+            switch (item.Emotion)
+            {
+                case "happy":
+                    rowColor = "#ADFF2F";
+                    break;
+                case "angry":
+                    rowColor = "#B22222";
+                    break;
+                case "proud":
+                    rowColor = "Gold";
+                    break;
+                case "relaxed":
+                    rowColor = "LightCyan";
+                    break;
+                case "sad":
+                    rowColor = "#6495ED";
+                    break;
+                case "worried":
+                    rowColor = "DarkOrange";
+                    break;
+                default:
+                    rowColor = "";
+                    break;
+            }
+
+            <tr style="background-color: @rowColor ">
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Emotion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Response)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.ActionLink("View Responses", "UserReport", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

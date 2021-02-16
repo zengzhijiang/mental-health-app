@@ -1,0 +1,50 @@
+@model MentalHealthApp.ViewModels.UserViewModel
+
+<style>
+    #wrap{
+        text-align: center;
+    }
+    #raisedHand{
+        margin-top: 10px;
+    }
+    #message {
+        display: inline-block;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 25px;
+        background: #ffffff;
+        border: 2px solid #ffffff;
+        padding: 20px;
+    }
+</style>
+
+@{
+    ViewData["Title"] = "HappyGame";
+}
+<div id="wrap">
+    <div id="message">
+        <h2>
+            It's great that you feel happy!<br /> @{WriteLiteral(Model.Avatar);} happy that you're happy.
+            <br />Give him a high-five!
+        </h2>
+    </div>
+    <br />
+    <img id="raisedHand" onclick="handClick()" src="~/images/emojis/raisedHand.png" />
+    <br />
+    <img id="polar" src="~/images/emojis/polar.png" height="300" width="300"/>
+</div>
+
+<script>
+    document.body.style.background = "#ADFF2F";
+    function handClick() {
+        $(document).ready(function () {
+                $('#raisedHand').animate({ width: "200px", height: "200px" }, 1000);
+                //play slap sound, maybe flash screen
+                $('#raisedHand').animate({ width: "120px", height: "120px" }, 1000, function () {
+                //thing to do when you animation is finished e.g.
+                window.location.href = '@Html.Raw(@Url.Action("Index", "Diagnostic"))';
+            });
+
+            });
+    }
+</script>

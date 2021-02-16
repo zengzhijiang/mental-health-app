@@ -1,0 +1,58 @@
+﻿<style>
+    .diagnostic {
+        margin-top: 30vh;
+    }
+    body{
+        padding-top: 0px;
+        padding-bottom: 0%;
+    }
+    #happy {
+        display: block;
+        margin: auto;
+    }
+    #flipped {
+        
+        
+        float: right;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+    }
+    
+    
+    .btn{
+        width: 49%;
+    }
+    #yes{
+        float:left;
+    }
+    #no{
+        float:right
+    }    
+</style>
+@{
+    ViewData["Title"] = "FirstQuestion";
+}
+
+<body>
+    <div id="content">
+        <div class="h-100 align-items-center diagnostic">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center"><h3>So, you're feeling @ViewBag.Emotion?</h3><img id="happy" src="~/images/emojis/@(ViewBag.Emotion).png" style="width:10%" /></div>
+                <div class="panel-body">
+                    <button class="btn btn-success" type="button" id="yes" onclick="location.href='@Url.Action("SecondQuestion", "Diagnostic", new { @emotion = ViewBag.Emotion, @color = ViewBag.Color })'">Yes</button>
+                    <button class="btn btn-danger" type="button" id="no" onclick="location.href='@Url.Action("", "diagnostic")'">No</button>
+                </div>
+            </div>
+
+        </div>
+        @*<img id="giraffe" src="~/images/emojis/baby_giraffe.png" style="width:15%" />
+        <img id="flipped" src="~/images/emojis/baby_giraffe.png" style="width:15%" />*@
+    </div>
+</body>
+    <script>
+    document.body.style.background = '@ViewBag.Color';
+    </script>

@@ -1,0 +1,48 @@
+C:\CAP\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.deps.json
+C:\CAP\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.runtimeconfig.json
+C:\CAP\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.runtimeconfig.dev.json
+C:\CAP\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.dll
+C:\CAP\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.pdb
+C:\CAP\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.csprojResolveAssemblyReference.cache
+C:\CAP\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.csproj.CoreCompileInputs.cache
+C:\CAP\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.AssemblyInfoInputs.cache
+C:\CAP\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.AssemblyInfo.cs
+C:\CAP\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.dll
+C:\CAP\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.pdb
+C:\CAP\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Team Services\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.deps.json
+C:\Team Services\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.runtimeconfig.json
+C:\Team Services\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.runtimeconfig.dev.json
+C:\Team Services\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.dll
+C:\Team Services\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.pdb
+C:\Team Services\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.csprojResolveAssemblyReference.cache
+C:\Team Services\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.csproj.CoreCompileInputs.cache
+C:\Team Services\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Team Services\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.AssemblyInfoInputs.cache
+C:\Team Services\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.AssemblyInfo.cs
+C:\Team Services\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.dll
+C:\Team Services\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.pdb
+C:\Users\Zengzhi Jiang\Downloads\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.deps.json
+C:\Users\Zengzhi Jiang\Downloads\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.runtimeconfig.json
+C:\Users\Zengzhi Jiang\Downloads\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.runtimeconfig.dev.json
+C:\Users\Zengzhi Jiang\Downloads\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.dll
+C:\Users\Zengzhi Jiang\Downloads\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.pdb
+C:\Users\Zengzhi Jiang\Downloads\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.csprojResolveAssemblyReference.cache
+C:\Users\Zengzhi Jiang\Downloads\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.csproj.CoreCompileInputs.cache
+C:\Users\Zengzhi Jiang\Downloads\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Zengzhi Jiang\Downloads\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.AssemblyInfoInputs.cache
+C:\Users\Zengzhi Jiang\Downloads\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.AssemblyInfo.cs
+C:\Users\Zengzhi Jiang\Downloads\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.dll
+C:\Users\Zengzhi Jiang\Downloads\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.pdb
+C:\Users\Zengzhi Jiang\Downloads\course work\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.deps.json
+C:\Users\Zengzhi Jiang\Downloads\course work\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.runtimeconfig.json
+C:\Users\Zengzhi Jiang\Downloads\course work\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.runtimeconfig.dev.json
+C:\Users\Zengzhi Jiang\Downloads\course work\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.dll
+C:\Users\Zengzhi Jiang\Downloads\course work\MentalHealthApp\MentalHealthApp\bin\Debug\netcoreapp2.0\MentalHealthApp.pdb
+C:\Users\Zengzhi Jiang\Downloads\course work\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.csprojResolveAssemblyReference.cache
+C:\Users\Zengzhi Jiang\Downloads\course work\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.csproj.CoreCompileInputs.cache
+C:\Users\Zengzhi Jiang\Downloads\course work\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Zengzhi Jiang\Downloads\course work\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.AssemblyInfoInputs.cache
+C:\Users\Zengzhi Jiang\Downloads\course work\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.AssemblyInfo.cs
+C:\Users\Zengzhi Jiang\Downloads\course work\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.dll
+C:\Users\Zengzhi Jiang\Downloads\course work\MentalHealthApp\MentalHealthApp\obj\Debug\netcoreapp2.0\MentalHealthApp.pdb

@@ -1,0 +1,42 @@
+﻿<h2 style="text-align:center;">Account Menu</h2>
+
+<hr>
+@{ var sess = Context.Session.GetDeserialized<MentalHealthApp.ViewModels.UserViewModel>("User");}
+
+
+
+
+<div class="row">
+    <div class="col-md-push-1 col-sm-push-1 col-xs-push-1"></div>
+    <div class="col-md-4 col-sm-4 col-xs-4">
+        @if (sess.AccountType == 2 || sess.AccountType == 1)
+        {
+            <a asp-action="DependentList" asp-controller="Login">User List</a>
+        }
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-4">
+        <a asp-action="PasswordChange" asp-controller="Account">Change Password</a>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-3">
+        @if (sess.AccountType == 2 || sess.AccountType == 1)
+        {
+            <a asp-action=\DependentList\ asp-controller=\Account\>Reset Dependent Account Password</a>
+        }
+
+    </div>
+</div>
+<div class="row" style="margin-top: 4%;">
+    <div class="col-md-push-1 col-sm-push-1 col-xs-push-1"></div>
+    <div class="col-md-4 col-sm-4 col-xs-4">
+        @if (sess.AccountType == 2 || sess.AccountType == 1)
+        {
+            <a asp-action="UserReports" asp-controller="Account">User Reports</a>
+        }
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-4">
+        <a asp-action="Linkuser" asp-controller="Account">Link Using LinkCode</a>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-3">
+        <a asp-action="Linkcode" asp-controller="Account">Generate Link Code</a>
+    </div>
+</div>

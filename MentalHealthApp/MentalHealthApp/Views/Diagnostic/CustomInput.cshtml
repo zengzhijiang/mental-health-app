@@ -1,0 +1,49 @@
+﻿<style>
+    .diagnostic {
+        margin-top: 30vh;
+    }
+
+    body {
+        padding-top: 0px;
+        padding-bottom: 0%;
+    }
+
+    #happy {
+        display: block;
+        margin: auto;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    #answer {
+        width: 100%;
+    }
+</style>
+@{
+    ViewData["Title"] = "CustomInput";
+}
+
+<body>
+    <div id="content">
+        <div class="h-100 align-items-center diagnostic">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center"><h3>Type why you feel @ViewBag.Emotion:</h3><img id="happy" src="~/images/emojis/@(ViewBag.Emotion).png" style="width:10%" /></div>
+                <div class="panel-body">
+                    <form asp-action="PostQuestions" asp-controller="diagnostic">
+                        @Html.ValidationSummary(true)
+                        @Html.Hidden("emotion", ViewBag.Emotion as string)
+                        @Html.Hidden("type", "Internal")
+                        @Html.TextArea("answer")
+
+                        <input type="submit" value="Done" class="btn btn-success" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+</body>
+<script>
+    document.body.style.background = '@ViewBag.Color';
+</script>

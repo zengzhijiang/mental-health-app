@@ -1,0 +1,94 @@
+﻿@model IEnumerable<MentalHealthApp.ViewModels.UserResponseViewModel>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<h2>@ViewBag.Name</h2>
+<button class="btn" style="margin-top:10px" data-toggle="collapse" data-target="#chart_div">Visual Data</button>
+<hr/>
+<div id="chart_div" class="collapse"></div>
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Emotion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Response)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Emotion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Response)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+<script>
+    google.charts.load('current', { packages: ['corechart', 'bar'] });
+    google.charts.setOnLoadCallback(drawBasic);
+
+    function drawBasic() {
+
+
+
+        var data = google.visualization.arrayToDataTable([
+            ['Emotion', 'Responses', { role: 'style' }],
+            ['Happy', @Model.Where(m => m.Emotion == "happy").Count() , '#ADFF2F'],            // RGB value
+            ['Angry', @Model.Where(m => m.Emotion == "angry").Count(), '#B22222'],            // English color name
+            ['Proud', @Model.Where(m => m.Emotion == "proud").Count(), 'gold'],
+            ['Sad', @Model.Where(m => m.Emotion == "sad").Count(), 'color: #6495ED'],
+            ['Relaxed', @Model.Where(m => m.Emotion == "relaxed").Count(), 'color: LightCyan'],
+            ['Worried', @Model.Where(m => m.Emotion == "worried").Count() , 'color: DarkOrange'],
+        ]);
+
+        var options = {
+            title: 'Response breakdown',
+            chartArea: { width: '75%' },
+            hAxis: {
+                title: 'Total Responses',
+                minValue: 20
+            },
+            vAxis: {
+                title: ''
+            },
+            legend: { position: 'none' }
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+    }
+</script>

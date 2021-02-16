@@ -1,0 +1,102 @@
+﻿@model MentalHealthApp.ViewModels.UserViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<link rel="stylesheet" type="text/css" href="~/css/iconselect.css">
+<script>
+
+
+
+
+    var iconSelect;
+
+    window.onload = function () {
+
+        iconSelect = new IconSelect("my-icon-select",
+            {
+                'selectedIconWidth': 60,
+                'selectedIconHeight': 60,
+                'selectedBoxPadding': 5,
+                'iconsWidth': 48,
+                'iconsHeight': 48,
+                'boxIconSpace': 3,
+                'vectoralIconNumber': 8,
+                'horizontalIconNumber': 1
+            });
+
+        var icons = [];
+        icons.push({ 'iconFilePath': '../../images/emojis/happy.png', 'iconValue': '' });
+        icons.push({ 'iconFilePath': '../../images/emojis/hippohappy.png', 'iconValue': 'hippo' });
+        icons.push({ 'iconFilePath': '../../images/emojis/lionhappy.png', 'iconValue': 'lion' });
+
+        iconSelect.refresh(icons);
+
+    };
+
+</script>
+<h2>Edit</h2>
+
+<h4>UserViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" type="hidden" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RepeatPassword" class="control-label"></label>
+                <input asp-for="RepeatPassword" class="form-control" />
+                <span asp-validation-for="RepeatPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountType" class="control-label"></label>
+                <input asp-for="AccountType" class="form-control" />
+                <span asp-validation-for="AccountType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avatar" class="control-label"></label>
+                <input asp-for="Avatar" type="hidden" />
+                <div id="my-icon-select"></div>
+                <span asp-validation-for="Avatar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

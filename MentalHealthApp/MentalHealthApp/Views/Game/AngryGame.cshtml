@@ -1,0 +1,80 @@
+﻿@model MentalHealthApp.ViewModels.UserViewModel
+
+<style>
+    #wrap { text-align: center; }
+
+    #raisedHand { margin-top: 10px; }
+
+    #message {
+        display: inline-block;  margin: auto;
+        margin-top: 10px;       border-radius: 20px;
+        background: #ffffff;    border: 2px solid #ffffff;    
+        padding: 5px;
+    }
+</style>
+
+@{
+    ViewData["Title"] = "AngryGame";
+}
+
+<div id="wrap">
+    <div id="message">
+        <h2>
+            We all feel angry sometimes. Koala is angry because he didn’t win a game.
+            <br />When @{WriteLiteral(Model.Avatar);} feels this way, he likes to drink water and take deep breaths.
+            <br />Have you tried drinking a glass of water?
+            <br />Now breathe with @{WriteLiteral(Model.Avatar);}.
+        </h2>
+    </div>
+    <br />
+    <br />
+    <label style="background-color:lightskyblue; font-size:larger"><strong> &ensp; Drink It &#x21E8 &#x21E8 &#x21E8 &ensp; </strong></label>
+    &ensp; &ensp; &ensp;
+    <img id="cup1" onclick="imageClick(this); this.onclick=null;" src="/images/angryGame/fulCup.png" />
+    <br /> <br /> <br /> <br />
+    <img id="dog" style="margin-left:20px" src="/images/angryGame/dog.png" height="226" width="248"/>
+</div>
+
+<script>
+    function startGame() {
+        myGamePiece = new component(30, 30, "red", 10, 120);
+        myGamePiece.gravity = 0.05;
+        myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+        myGameArea.start();
+    }
+    var myGameArea = {
+        canvas: document.createElement("canvas"),
+        start: function () {
+            this.canvas.width = 480;
+            this.canvas.height = 270;
+            this.context = this.canvas.getContext("2d");
+            document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+            this.frameNo = 0;
+        },
+        clear: function () {
+            this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        }
+    }
+    document.body.style.background = "#B22222";
+
+
+
+    function imageClick() {
+        $(document).ready(function () {
+            $("#cup1").attr("src", "/images/angryGame/empCup.png");
+           // $("#cup1").velocity({
+            //    translateX: "200px",
+              //  rotateZ: "45deg"
+            //});
+            Velocity($("#cup1"), { translateX: 200 }, { duration: 2000 });
+
+            $('#cup1').animate({ width: "120px", height: "120px" }, 1000, function () {
+                window.location.href = '@Html.Raw(@Url.Action("Index", "Diagnostic"))';
+            });
+
+            });
+    }
+
+</script>
+
+<script src="~/js/velocity.js">  </script>

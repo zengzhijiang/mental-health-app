@@ -1,0 +1,12 @@
+C:\Team Services\MentalHealthApp\MentalHealthApp\bin\Release\netcoreapp2.0\MentalHealthApp.deps.json
+C:\Team Services\MentalHealthApp\MentalHealthApp\bin\Release\netcoreapp2.0\MentalHealthApp.runtimeconfig.json
+C:\Team Services\MentalHealthApp\MentalHealthApp\bin\Release\netcoreapp2.0\MentalHealthApp.runtimeconfig.dev.json
+C:\Team Services\MentalHealthApp\MentalHealthApp\bin\Release\netcoreapp2.0\MentalHealthApp.dll
+C:\Team Services\MentalHealthApp\MentalHealthApp\bin\Release\netcoreapp2.0\MentalHealthApp.pdb
+C:\Team Services\MentalHealthApp\MentalHealthApp\obj\Release\netcoreapp2.0\MentalHealthApp.csprojResolveAssemblyReference.cache
+C:\Team Services\MentalHealthApp\MentalHealthApp\obj\Release\netcoreapp2.0\MentalHealthApp.csproj.CoreCompileInputs.cache
+C:\Team Services\MentalHealthApp\MentalHealthApp\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Team Services\MentalHealthApp\MentalHealthApp\obj\Release\netcoreapp2.0\MentalHealthApp.AssemblyInfoInputs.cache
+C:\Team Services\MentalHealthApp\MentalHealthApp\obj\Release\netcoreapp2.0\MentalHealthApp.AssemblyInfo.cs
+C:\Team Services\MentalHealthApp\MentalHealthApp\obj\Release\netcoreapp2.0\MentalHealthApp.dll
+C:\Team Services\MentalHealthApp\MentalHealthApp\obj\Release\netcoreapp2.0\MentalHealthApp.pdb

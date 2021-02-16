@@ -1,0 +1,76 @@
+﻿@model MentalHealthApp.ViewModels.UserViewModel
+
+<style>
+    #wrap { text-align: center; }
+    #raisedHand { margin-top: 10px; }
+    #message {
+        display: inline-block;  margin: auto;
+        margin-top: 10px;       border-radius: 20px;
+        background: #ffffff;    border: 2px solid #ffffff;    
+        padding: 5px;
+    }
+    #done {
+        display: flex;
+        visibility: hidden;
+        margin-top: 10px;
+    }
+
+</style>
+
+@{
+    ViewData["Title"] = "SadGame";
+}
+
+<div id="wrap">
+    <div id="message">
+        <h2>
+            We all feel sad sometimes. @{WriteLiteral(Model.Avatar);} is sad because he doesn’t have any color.
+            <br /> He forgot to color himself today! Will you help color him?
+        </h2>
+    </div>
+    <br /> <br /> <br />
+    <img id="hippo" onclick="imageClick(this);" src="/images/sadGame/bear.png" height="283" width="600" />
+    <br />
+    <button id="done" class='btn btn-success' onclick="location.href='@Url.Action("", "diagnostic")'">Good job you helped the bear feel happy again!</button>
+</div>
+
+<script>
+    function startGame() {
+        redGamePiece = new component(75, 75, "red", 10, 10);
+        yellowGamePiece = new component(75, 75, "yellow", 50, 60);
+        blueGamePiece = new component(75, 75, "blue", 10, 220);
+        myGameArea.start();
+    }
+    var myGameArea = {
+        canvas: document.createElement("canvas"),
+        start: function () {
+            this.canvas.width = 480;
+            this.canvas.height = 270;
+            this.context = this.canvas.getContext("2d");
+            document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+            this.frameNo = 0;
+        },
+        clear: function () {
+            this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        }
+    }
+    document.body.style.background = "#6495ED";
+    function imageClick() {
+        $(document).ready(function () {
+            if (String($("#hippo").attr("src")) === "/images/sadGame/bear.png") {
+                $("#hippo").attr("src", "/images/sadGame/bear2.png");
+            } else if (String($("#hippo").attr("src")) === "/images/sadGame/bear2.png") {
+                $("#hippo").attr("src", "/images/sadGame/bear3.png");
+            } else if (String($("#hippo").attr("src")) === "/images/sadGame/bear3.png") {
+                $("#hippo").attr("src", "/images/sadGame/bear4.png");
+            } else if (String($("#hippo").attr("src")) === "/images/sadGame/bear4.png") {
+                $("#hippo").attr("src", "/images/sadGame/bear5.png");
+            } else if (String($("#hippo").attr("src")) === "/images/sadGame/bear5.png") {
+                $("#hippo").attr("src", "/images/sadGame/bear6.png");
+            } else {
+                document.getElementById('done').style.visibility = 'visible';
+            }
+        });
+    }
+</script>
+

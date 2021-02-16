@@ -1,0 +1,55 @@
+﻿<style>
+    .diagnostic {
+        margin-top: 30vh;
+    }
+
+    body {
+        padding-top: 0px;
+        padding-bottom: 0%;
+    }
+
+    #happy {
+        display: block;
+        margin: auto;
+    }
+
+    .btn {
+        width: 49%;
+    }
+
+    #yes {
+        float: left;
+    }
+
+    #no {
+        float: right
+    }
+</style>
+@{
+    ViewData["Title"] = "ThirdQuestion";
+}
+
+<body>
+    <div id="content">
+        <div class="h-100 align-items-center diagnostic">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center"><h3>Did you do something to make you @ViewBag.Emotion?</h3><img id="happy" src="~/images/emojis/@(ViewBag.Emotion).png" style="width:10%" /></div>
+                <div class="panel-body">
+                    <form asp-action="PostQuestions" asp-controller="diagnostic">
+                        @Html.Hidden("emotion", ViewBag.Emotion as string)
+                        @Html.Hidden("answer", "")
+                        @Html.Hidden("type", "Internal")
+
+
+                        <input type="submit" value="Yes" class="btn btn-success" id="yes" />
+
+                    </form>
+                    <button class="btn btn-danger" type="button" id="no" onclick="location.href='@Url.Action("custominput", "diagnostic", new { @emotion = ViewBag.Emotion, @color = ViewBag.Color })'">No</button>
+                </div>
+            </div>
+        </div>
+        </div>
+</body>
+<script>
+    document.body.style.background = '@ViewBag.Color';
+</script>
